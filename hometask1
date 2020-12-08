@@ -1,0 +1,11 @@
+import psutil
+import time
+import os
+import sys
+
+for pr in psutil.process_iter():
+    print("processes",pr)
+
+dat=psutil.sensors_temperatures()
+for temp in dat["coretemp"]:
+    print ("temprature",temp.current)
